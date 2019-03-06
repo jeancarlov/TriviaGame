@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Trivial Trivia Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap File -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
+
 </head>
+
 <body>
-    
+    <div class=" main-conatiner">
+        <div class="jumbotron">
+            <h1 class="display-4">Trivial Trivia Game</h1>
+            <!-- this is the button that will start the game -->
+            <a class="btn btn-primary btn-lg" id="start-game" href="#" role="button">start now</a>
+        </div>
+
+        <div class="wrapper">
+            <!-- time counter -->
+            <div class="timer" id=" time-left"></div>
+
+            <!-- Questions and answers -->
+            <div class="form"   id="questions-container"></div>
+
+
+
+            <!-- message display to the user  -->
+            <div class="message">e</div>
+
+            
+             <!-- results display  -->
+            <duv class="results"></duv>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- Javascript links -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="./assets/javascript/app.js"></script>
 </body>
+</body>
+
+
 </html>
