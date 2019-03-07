@@ -9,7 +9,8 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap File -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
 
@@ -20,23 +21,24 @@
         <div class="jumbotron">
             <h1 class="display-4">Trivial Trivia Game</h1>
             <!-- this is the button that will start the game -->
-            <a class="btn btn-primary btn-lg" id="start-game" href="#" role="button">start now</a>
+            <a class="btn btn-primary btn-lg" id="start-now" href="#" role="button">start now</a>
         </div>
 
         <div class="wrapper">
             <!-- time counter -->
-            <div class="timer" id=" time-left"></div>
+            <div class="timer" id="time-left"></div>
 
             <!-- Questions and answers -->
-            <div class="form"   id="questions-container"></div>
+            <div class="form-question" id="questions-container"></div>
+            <div class='form-answer' id='answers-container'></div>
 
 
 
             <!-- message display to the user  -->
-            <div class="message">e</div>
+            <div class="message">All-done</div>
 
-            
-             <!-- results display  -->
+
+            <!-- results display  -->
             <duv class="results"></duv>
 
 
@@ -58,19 +60,16 @@
 
     </div>
     <!-- Javascript links -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" -->
+        <!-- integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="./assets/javascript/app.js"></script>
 </body>
-</body>
-
 
 </html>
