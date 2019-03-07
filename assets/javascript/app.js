@@ -1,5 +1,5 @@
 
-// Use to make a function available after the document is ready
+// Use to make a function to display the html document before the javascript 
 $(document).ready(function () {
 
     // Global variables
@@ -8,25 +8,7 @@ $(document).ready(function () {
     var correctAnswers = 0;
     var incorrectAnswers = 0;
     var unAnswered = 0;
-    var count = 45 // this varible could be store here or in the 
-
-    // timer example to structure my timer that while be decresing the count variable by a second
-
-    // timer evet
-    var timer = setTimeout(stuffToDo, 1000);
-    clearTimeout(timer);
-    var count = 45;  // this is the time in seconds that will decrease 
-
-    // funtion that actually gets called
-
-    function stuffToDo() {
-        count--;
-    }
-
-    let interval = setInterval(stuffToDo, 1000);
-    clearInterval(interval);
-
-
+    var count = 45 
 
 
     // game questions and answers. Check if is better to have the questions before the start game fn or inside the wrapper.
@@ -66,13 +48,24 @@ $(document).ready(function () {
         },
     ];
 
+    // I need to put a reset funtion for the game to star again after the results have been show 
 
     // start funtion when the button is click phase 1
     $('#start-now').on('click', function () {
         $(this).hide();
-
+        var counter = setInterval(timer, 1000);
+        showQuestions();
 
     });
+    // timer funtion for the seconds to decrease the variable count by a 1000
+    function timer (){
+        count--;
+        $('#timer').html('Time remaining: ' + '00' + count + "seconds");
+        if( count <=0){
+        clearInterval(counter)
+        //check if there is a piece missing for this function to work
+        }
+    }
 
     // phase 2  showing the questions and answer with the time counter in seconds running
     function showQuestions() {
@@ -94,6 +87,20 @@ $(document).ready(function () {
         }
         console.log(myAnswers);
     }
+
+    $('#answer-container').on('click', 'button', function(event){
+        userPick = $('#answer-container').data('value');
+        myQuestions[0].correctAnswer;
+        if( userPick === myQuestions[0].correctAnswer){
+            correctAnswers++;
+        } else if ( userPick !== myQuestions[0].correctAnswer){
+            incorrectAnswers
+        }
+    })
+
+
+    // notes: phase three show the message all done, show results, and reset funtion for the game to start again
+
 
 },
 
