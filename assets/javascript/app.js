@@ -8,7 +8,7 @@ $(document).ready(function () {
     var correctAnswers = 0;
     var incorrectAnswers = 0;
     var unAnswered = 0;
-    var count = 45
+    var count = 15;
 
 
     
@@ -19,38 +19,38 @@ $(document).ready(function () {
 
     var myQuestions = [
         {
-            question: "where is mount everest located at?",
+            question: "Where is mount Everest located at?",
             answers: {
-                a: 'canada',
-                b: 'nepal',
-                c: 'china'
+                a: 'Canada',
+                b: 'Nepal',
+                c: 'China'
             },
             correctAnswer: 'b'
         },
         {
-            question: "moscow is the capital of what country?",
+            question: "Moscow is the capital of what country?",
             answers: {
-                a: 'russia',
-                b: 'venezuela',
-                c: 'germany',
+                a: 'Russia',
+                b: 'Venezuela',
+                c: 'Germany',
             },
             correctAnswer: 'a'
         },
         {
-            question: "berlin is the capital of what country?",
+            question: "Berlin is the capital of what country?",
             answers: {
-                a: 'germany',
-                b: 'france',
-                c: 'italy'
+                a: 'Germany',
+                b: 'France',
+                c: 'Italy'
             },
             correctAnswer: 'a'
         },
         {
-            question: "rome is the capital of what country?",
+            question: "Rome is the capital of what country?",
             answers: {
-                a: 'germany',
-                b: 'france',
-                c: 'italy'
+                a: 'Germany',
+                b: 'France',
+                c: 'Italy'
             },
             correctAnswer: 'c'
         },
@@ -59,22 +59,25 @@ $(document).ready(function () {
     console.log(myQuestions)
     // I need to put a reset funtion for the game to star again after the results have been show 
 
+
+
     // start funtion when the button is click phase 1
     $('#start-now').on('click', function () {
         $(this).hide();
-        var counter = setInterval(timer, 1000);
+        counter = setInterval(timer, 1000);
         showQuestions();
-
+      
     });
     // timer funtion for the seconds to decrease the variable count by a 1000
     function timer() {
         count--;
         $('#timer').html('Time remaining: ' + count + " seconds");
         if (count <= 0) {
-            clearInterval(counter)
+        clearInterval(counter);
             //check if there is a piece missing for this function to work
         }
     }
+    // }
 
     // phase 2  showing the questions and answer with the time counter in seconds running
     function showQuestions() {
@@ -98,16 +101,6 @@ $(document).ready(function () {
         $('#questions-container').append('<button>' + myQuestions[3].answers.a + '</button>');
         $('#questions-container').append('<button>' + myQuestions[3].answers.b + '</button>');
         $('#questions-container').append('<button>' + myQuestions[3].answers.c + '</button><br>')
-        // question++;
-
-        if (myQuestions[0].question === myQuestions.correctAnswer[0]){
-            correctAnswers++;
-            // $('.results').text(myQuestions.correctAnswers[0])
-        } else if (myQuestions[0].question !== myQuestions.correctAnswer[0]) {
-            incorrectAnswers++;
-        };
-
-
 
     }
 
